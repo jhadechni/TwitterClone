@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "Annie",
+        "tweets": "754",
+        "username": "@annie",
+        "bio": "Books are my passion",
+        "is_verified": true,
+        "banner_image": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/image.jpg?alt=media&token=c3ebb9f0-a41d-4eb8-bae8-9af2ec29e379",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic.png?alt=media&token=24c40687-9fc2-4fd4-998d-7a002bfd1436",
+        "followers" : "150",
+        "following" : "150"
+    }
+]

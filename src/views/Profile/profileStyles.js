@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max_device } from '../../components/utils';
+
 export const Root = styled.section`
   display: flex;
   justify-content: center;
@@ -61,4 +62,9 @@ export const Icon = styled.img`
   &:hover {
         background-color: rgb(231, 231, 232);
     }
+`;
+
+export const ContainerProfilePic = styled.div`
+  position: relative;
+  border: 1px solid;
 `;
