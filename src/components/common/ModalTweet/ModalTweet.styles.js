@@ -17,7 +17,8 @@ export const ModalContainerBig = styled.section`
 export const ModalContainer = styled.section`
   background-color: white;
   width: 568px;
-  height: 300px;
+  height: max-content;
+  min-height: 230px;
   border-radius: 15px;
   padding-bottom: 10px;
 `;
@@ -45,7 +46,7 @@ export const CreateTweetSubcontainer = styled.div `
     margin-right: 25px;
     margin-left: 25px;
     margin-top: 10px;
-    height:80%;
+    height:70%;
 `
 
 export const CreateTweetProfilePicture = styled.img `
