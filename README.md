@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Twitter Clone App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a clone for the Twitter app. Was developed with react and styled components. It includes Server-Side-Rendering and SEO practices.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- [Node](https://nodejs.org/)
+- yarn, built into Node.
 
 ### `yarn start`
 
