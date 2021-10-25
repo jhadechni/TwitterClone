@@ -21,7 +21,6 @@ export const Container2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-items: center;
-  background-color: yellow;
 `;
 
 export const Container3 = styled.div`

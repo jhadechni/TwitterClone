@@ -5,7 +5,8 @@ export {
   GRAY,
   WHITE,
   LIGHT_BLACK,
-  DIMMED_GRAY
+  DIMMED_GRAY,
+  BLACK
 } from './reusable/colors';
 
 export {
@@ -16,7 +17,8 @@ export {
   Link,
   Title,
   Label,
-  Tools
+  Tools,
+  BlackText
 } from './reusable/reusable.styles.js';
 
 export {

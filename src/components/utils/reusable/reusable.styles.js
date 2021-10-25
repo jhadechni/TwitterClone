@@ -1,9 +1,17 @@
 import styled from 'styled-components';
-import { GRAY, LIGHT_GRAY, LIGHT_BLUE, DIMMED_GRAY } from './colors';
+import { GRAY, LIGHT_GRAY, LIGHT_BLUE, DIMMED_GRAY, BLACK } from './colors';
 import { Link as Linked } from 'react-router-dom';
 
 export const GrayText = styled.p`
   color: ${(props) => (props.dimmed ? `${DIMMED_GRAY}` : `${DIMMED_GRAY}`)};
+  text-align: ${(props) => (props.align ? 'center' : 'none')};
+  margin-bottom: ${(props) => (props.margin_bottom ? '15px' : 'none')};
+  margin: ${(props) => (props.margin ? '0px 5px 0px 5px' : 'none')};
+  margin-top: ${(props) => (props.margin_top ? '15px' : 'none')};
+  font-weight: ${(props) => props.light && '400'};
+`;
+export const BlackText = styled.p`
+  color: ${(props) => (props.dimmed ? `${BLACK}` : `${BLACK}`)};
   text-align: ${(props) => (props.align ? 'center' : 'none')};
   margin-bottom: ${(props) => (props.margin_bottom ? '15px' : 'none')};
   margin: ${(props) => (props.margin ? '0px 5px 0px 5px' : 'none')};
