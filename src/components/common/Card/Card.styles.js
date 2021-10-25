@@ -67,6 +67,10 @@ export const Icons = styled.div`
 
 export const IconImg = styled.img`
   cursor: pointer;
+  border-radius: 24px;
+  &:hover {
+    background-color: #1da0f21e;
+  }
 `;
 
 export const Content = styled.div`

@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import PropTypes from 'prop-types';
 import { GrayText } from '../../utils';
 import Verified from '../../../assets/svg/verifiedicon.svg';
@@ -19,7 +20,10 @@ import {
   Content,
   ImgContent
 } from './Card.styles';
+import { ModalReply } from '../ModalReply'
+
 export const Card = ({ values }) => {
+  const [showModalReply, setShowModalReply] = useState(false);
   return (
     <Margins>
       <Container>
@@ -45,7 +49,8 @@ export const Card = ({ values }) => {
         </ContentContainer>
       </Container>
       <Icons>
-        <IconImg src={Reply} alt="Comment-Icon" />
+        <IconImg onClick={() => setShowModalReply(true)} src={Reply} alt="Comment-Icon" />
+        {showModalReply && <ModalReply closeModalReply={setShowModalReply} values={values} />}
         <IconImg src={Retweet} alt="RT-Icon" />
         <IconImg src={Like} alt="Like-Icon" />
         <IconImg src={Share} alt="ShareIcon" />

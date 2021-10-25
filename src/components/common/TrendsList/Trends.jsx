@@ -15,11 +15,11 @@ import { TrendsItem } from '../TrendsItem';
 
 const data = [
     { id: 1, hastag: 'JaimeSierra', quantity: '2000' },
-    { id: 2, hastag: 'MarceImagínate', quantity: '456' },
-    { id: 3, hastag: 'LaFiscalía', quantity: '456' },
+    { id: 2, hastag: 'Uninorte', quantity: '456' },
+    { id: 3, hastag: 'Spiderman', quantity: '456' },
     { id: 4, hastag: 'VictorMendoza', quantity: '456' },
-    { id: 5, hastag: 'ElCompadreSeCayó', quantity: '456' },
-    { id: 6, hastag: 'DoñaPiedad', quantity: '456' }
+    { id: 5, hastag: 'DiomedesDiaz', quantity: '456' },
+    { id: 6, hastag: 'RollingStone', quantity: '456' }
   ];
 
 export const Trends = () => {

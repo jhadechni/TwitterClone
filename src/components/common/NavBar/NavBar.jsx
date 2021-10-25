@@ -13,11 +13,11 @@ import twittericon from '../../../assets/svg/twittericon.svg'
 import { ModalTweet } from '../ModalTweet'
 
 export const NavBar = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showModalTweet, setShowModalTweet] = useState(false);
     return (
         <NabVarContainer>
             <Twitterlogo src={twittericon} width="30,27" height="24,61"/>
-            <NavItem icon={homeicon} title="Home" ulr="/timeline"></NavItem>
+            <NavItem icon={homeicon} title="Home" url="/home"/>
             <NavItem icon={hastagicon} title="Explore" ulr="/explore" ></NavItem>
             <NavItem icon={bellicon} title="Notifications" url="/notifications"></NavItem>
             <NavItem icon={mailicon} title="Messages" url="/mail"></NavItem>
@@ -25,10 +25,10 @@ export const NavBar = () => {
             <NavItem icon={listicon} title="Lists" url="/list"></NavItem>
             <NavItem icon={ProfilePic} title="Profile" url="/profile"></NavItem>
             <NavItem icon={moreicon} title="More" url="/more"></NavItem>
-            <ButtonLightBlue onClick={() => setShowModal(true)}>
+            <ButtonLightBlue onClick={() => setShowModalTweet(true)}>
                 Tweet
             </ButtonLightBlue>
-            {showModal && <ModalTweet closeModal={setShowModal} />}
+            {showModalTweet && <ModalTweet closeModalTweet={setShowModalTweet} />}
         </NabVarContainer>
     )
 }

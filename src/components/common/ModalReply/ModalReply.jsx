@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React, {useState} from 'react';
-
+import { Link } from 'react-router-dom';
 import {
   ModalContainerBig,
   ModalContainer,
@@ -17,8 +17,21 @@ import {
   CreateTweetButton,
   TweetButtonContaner,
   Line,
-  CaptainDiv
-} from './ModalTweet.styles';
+  CaptainDiv,
+  Container,
+  ProfileCont,
+  Img,
+  GrayWords,
+  LightBlueText,
+  ContentContainer,
+  IconImg,
+  HeadersContainer,
+  Text,
+  TweetContent,
+  Content
+} from './ModalReply.styles';
+import { GrayText} from '../../utils';
+import Verified from '../../../assets/svg/verifiedicon.svg';
 import ProfilePic from '../../../assets/Images/ProfilePic.png'
 import closeIcon from '../../../assets/svg/closeicon.svg'
 import mediaIcon from '../../../assets/svg/mediaicon.svg'
@@ -28,8 +41,8 @@ import emojiIcon from '../../../assets/svg/emojiicon.svg'
 import plusIcon from '../../../assets/svg/plusicon.svg'
 import elipse from '../../../assets/Images/elipse.png'
 
-export const ModalTweet = (props) => {
-
+export const ModalReply = (props) => {
+  const values = props.values;
   const [show, setShow] = useState(false);
     const handleChange = (e) => {
         let r = e.target.value
@@ -48,15 +61,37 @@ export const ModalTweet = (props) => {
   return ReactDOM.createPortal(
     <ModalContainerBig>
       <ModalContainer>
-        <ButtonContainer onClick={() => props.closeModalTweet(false)}>
+        <ButtonContainer onClick={() => props.closeModalReply(false)}>
             <Icon src={closeIcon} alt="Profile-picture" />
         </ButtonContainer>
+        <Container>
+          <ProfileCont>
+            <Img round src={values.profile_picture} alt="Profile-picture" />
+          </ProfileCont>
+          <ContentContainer>
+            <HeadersContainer>
+              <Text>{values.name}</Text>
+              {values.is_verified && <IconImg src={Verified} alt="verify-icon" />}
+              <GrayText light dimmed margin>
+                {values.username}
+              </GrayText>
+              <GrayText margin>• {values.time_ago}</GrayText>
+            </HeadersContainer>
+            <Content>
+              <TweetContent>{values.content}</TweetContent>
+            </Content>
+            <GrayWords align>
+              Replying to{' '}
+              <Link to={"/"+values.username.substr(1,values.username.lenght)}>
+                <LightBlueText>{values.username}</LightBlueText>
+              </Link>
+            </GrayWords>
+          </ContentContainer>
+        </Container>
         <CreateTweetSubcontainer>
-          <div>
-            <CreateTweetProfilePicture src={ProfilePic} alt='Profile'/>
-          </div>
-        <CreateTweetBoxContainer>
-            <CreateTweetInputBox type='text' onChange={handleChange} placeholder='What´s happening?'/>
+          <Img round src={ProfilePic} alt="Profile-picture" />
+          <CreateTweetBoxContainer>
+            <CreateTweetInputBox type='text' onChange={handleChange} placeholder='Tweet your reply'/>
             <CreateTweetButtonsContainer>
                 <AddersButtonContainer>
                     <IconsButtons>
@@ -82,11 +117,11 @@ export const ModalTweet = (props) => {
                             </>
                         }
                     </CaptainDiv>
-                    <CreateTweetButton onClick={handleTweet}>Tweet</CreateTweetButton>
+                    <CreateTweetButton onClick={handleTweet}>Reply</CreateTweetButton>
                 </TweetButtonContaner>
             </CreateTweetButtonsContainer>
-        </CreateTweetBoxContainer>
-    </CreateTweetSubcontainer>
+          </CreateTweetBoxContainer>
+        </CreateTweetSubcontainer>
       </ModalContainer>
     </ModalContainerBig>,
     document.getElementById('modal')

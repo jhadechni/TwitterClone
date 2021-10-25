@@ -1,8 +1,9 @@
 import cuid from 'cuid';
-import { NavBar, Trends, ProfileInfo } from '../../components/common';
+import { NavBar, Trends, ProfileInfo, Card } from '../../components/common';
 import { Container, Box, BoxContent, Root, Title, SubTitle, Icon, Container2, Container3 } from './profileStyles';
 import backArrow from '../../assets/svg/backarrow.svg'
 import profile from '../../userprofile.json';
+import data from '../../data.json';
 export const Profile = () => {
     return (
         <Root>
@@ -25,6 +26,9 @@ export const Profile = () => {
                     </Container2>
                     {profile.map((e) => {
                         return <ProfileInfo key={cuid()} values={e} />;
+                    })}
+                    {data.map((e)=>{
+                        return <Card key={cuid()} values={e} />;
                     })}
                 </BoxContent>
 

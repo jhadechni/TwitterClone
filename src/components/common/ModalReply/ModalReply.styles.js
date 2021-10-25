@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { max_device } from '../../utils';
+import { max_device, LIGHT_BLACK, DIMMED_GRAY, LIGHT_BLUE } from '../../utils';
 
 export const ModalContainerBig = styled.section`
   position: fixed;
@@ -17,8 +17,8 @@ export const ModalContainerBig = styled.section`
 export const ModalContainer = styled.section`
   background-color: white;
   width: 568px;
-  height: max-content;
-  min-height: 230px;
+  height: auto;
+  min-height: 320px;
   border-radius: 15px;
   padding-bottom: 10px;
 `;
@@ -42,11 +42,11 @@ export const Icon = styled.img`
 `;
 
 export const CreateTweetSubcontainer = styled.div `
-    display: flex;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 10px;
-    height:70%;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 `
 
 export const CreateTweetProfilePicture = styled.img `
@@ -55,12 +55,12 @@ export const CreateTweetProfilePicture = styled.img `
 `
 
 export const CreateTweetBoxContainer = styled.div `
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
 `
 
 export const CreateTweetInputBox = styled.input `
@@ -72,15 +72,14 @@ export const CreateTweetInputBox = styled.input `
 `
 
 export const CreateTweetButtonsContainer = styled.div `
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-top: solid 1px #e7ecf065;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: solid 1px #e7ecf065;
 `
 
 export const AddersButtonContainer = styled.div `
     display: flex;
-    padding-top: 10px;
 `
 
 export const IconsButtons = styled.button `
@@ -102,16 +101,14 @@ export const IconsButtons = styled.button `
 `
 
 export const CreateTweetButton = styled.button `
-    height: 42px;
+    height: 35px;
     width: 98px;
     background-color: #1DA1F2;
     border: none;
     border-radius: 55px;
     color: white;
     font-size: 15px;
-    font-weight: bold;
     cursor: pointer;
-
     &:hover {
         background-color: #117dc0;
     }
@@ -123,7 +120,6 @@ export const TweetButtonContaner = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
 `
 
 export const IconsButtonsImg = styled.img `
@@ -145,4 +141,61 @@ export const CaptainDiv = styled.div `
     width:50%;
     height: 100%;
     margin-right: 10px;
-`
+`;
+
+export const Container = styled.div`
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: 0.2fr 2fr 0.2fr;
+  @media ${max_device.lg} {
+    grid-template-columns: 0.2fr 2fr 0.2fr;
+  }
+`;
+export const ProfileCont = styled.div``;
+export const Img = styled.img`
+  width: ${(props) => (props.round ? '40px' : '100%')};
+  height: ${(props) => (props.round ? '40px' : '50%')};
+`;
+export const ContentContainer = styled.div``;
+export const IconImg = styled.img`
+  cursor: pointer;
+  border-radius: 24px;
+  &:hover {
+    background-color: #1da0f21e;
+  }
+`;
+export const HeadersContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+export const Text = styled.h4`
+  font-weight: 700;
+  margin: 0px 5px 0px 5px;
+`;
+export const Content = styled.div`
+  margin: 0px 0 7px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @media ${max_device.lg} {
+    align-items: center;
+  }
+`;
+export const TweetContent = styled.p`
+  color: ${LIGHT_BLACK};
+  margin: 10px 0px 10px 10px;
+  font-weight: 400;
+  font-size: 15px;
+`;
+export const GrayWords = styled.p`
+  color: ${DIMMED_GRAY};
+  margin: 10px 0px 10px 10px;
+  font-weight: 400;
+  font-size: 15px;
+`;
+export const LightBlueText = styled.span`
+  color: ${LIGHT_BLUE};
+`;

@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
   &:hover{
     color: #1DA1F2;
     transition: color 100ms ease-out;

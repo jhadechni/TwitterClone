@@ -18,9 +18,9 @@ export const Routes = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SingUp} />
         <Route exact path="/passwordRecovery" component={PasswordRecovery} />
-        <Route exact path="/profile" component={Profile} /> 
         {/* Private Routes */}
         <Route exact path="/home" component={Home} />
+        <Route exact path="/profile" component={Profile} /> 
       </Switch>
     </BrowserRouter>
   );
