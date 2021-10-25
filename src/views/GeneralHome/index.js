@@ -1,0 +1,1 @@
+export { GeneralHome } from './GeneralHome';
