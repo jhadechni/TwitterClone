@@ -39,11 +39,7 @@ export const ModalTweet = (props) => {
             setShow (false)
         }
     }
-
-    const [tweet, setTweet] = useState({});
-    const handleTweet = (e) => {
-        
-    }
+    const handleTweet = (e) => {}
 
   return ReactDOM.createPortal(
     <ModalContainerBig>

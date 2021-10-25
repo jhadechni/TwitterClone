@@ -7,7 +7,6 @@ import {
   ButtonContainer,
   Icon,
   CreateTweetSubcontainer,
-  CreateTweetProfilePicture,
   CreateTweetBoxContainer,
   CreateTweetInputBox,
   CreateTweetButtonsContainer,
@@ -52,11 +51,7 @@ export const ModalReply = (props) => {
             setShow (false)
         }
     }
-
-    const [tweet, setTweet] = useState({});
-    const handleTweet = (e) => {
-        
-    }
+    const handleTweet = (e) => {}
 
   return ReactDOM.createPortal(
     <ModalContainerBig>
