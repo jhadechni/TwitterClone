@@ -20,6 +20,7 @@ export const Container2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-items: center;
+  background-color: yellow;
 `;
 
 export const Container3 = styled.div`
@@ -40,8 +41,6 @@ export const BoxContent = styled.div`
 `;
 
 export const Title = styled.h1`
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-width: 0 1px 0 1px;
   margin: 0px 0 0 0;
   padding: 25px 0 0px 15px;
   font-size: 30px;
