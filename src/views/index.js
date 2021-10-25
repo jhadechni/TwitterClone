@@ -1,0 +1,6 @@
+export {GeneralHome} from "./GeneralHome"
+export {Home} from "./Home"
+export {Login} from "./Login"
+export {SingUp} from "./SignUp"
+export {PasswordRecovery} from "./PasswordRecovery"
+export {Profile} from "./Profile"

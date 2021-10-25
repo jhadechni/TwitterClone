@@ -1,0 +1,1 @@
+export { TrendsItem } from "./TrendsItem";

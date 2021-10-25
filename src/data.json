@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "Annie",
+        "username": "@annie",
+        "time_ago": "14s",
+        "content": "This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis",
+        "include_hashtag": true,
+        "include_image": true,
+        "is_verified": true,
+        "content_image": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/image.jpg?alt=media&token=c3ebb9f0-a41d-4eb8-bae8-9af2ec29e379",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic.png?alt=media&token=24c40687-9fc2-4fd4-998d-7a002bfd1436"
+    },
+    {
+        "id": "2",
+        "name": "Jorge Mckinney",
+        "username": "@Travis Wade",
+        "time_ago": "14s",
+        "content": "This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis",
+        "include_hashtag": true,
+        "include_image": false,
+        "is_verified": true,
+        "content_image": "",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic-1.png?alt=media&token=caa7650c-9b87-4637-ad9e-4b19e4bbd6e5"
+    },
+    {
+        "id": "3",
+        "name": "Serenity Jones",
+        "username": "@Crystal Robinson",
+        "time_ago": "14s",
+        "content": "This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis. This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis ",
+        "include_hashtag": true,
+        "include_image": true,
+        "is_verified": false,
+        "content_image": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/image-1.jpg?alt=media&token=0a035efe-f4a7-4010-b93c-b84c6a8d865e",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic-2.png?alt=media&token=81688563-7de7-4542-b4a3-eb53a7e79991"
+    },
+    {
+        "id": "4",
+        "name": "Dianne Fisher",
+        "username": "@Clyde Lowe",
+        "time_ago": "14s",
+        "content": "This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis",
+        "include_hashtag": true,
+        "include_image": true,
+        "is_verified": false,
+        "content_image": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/image-2.jpg?alt=media&token=10601f2d-6f9b-4805-9158-417974710e05",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic-3.png?alt=media&token=5592a0a0-6f33-4744-a5fd-96808a2da9ec"
+    },
+    {
+        "id": "5",
+        "name": "Dustin Alexander",
+        "username": "@Kristin Murphy",
+        "time_ago": "14s",
+        "content": "This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis ",
+        "include_hashtag": true,
+        "include_image": true,
+        "is_verified": true,
+        "content_image": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/image-3.jpg?alt=media&token=49630081-efb8-4a5f-ab6e-73e4d92f72ec",
+        "profile_picture": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-aa62b.appspot.com/o/ProfilePic-4.png?alt=media&token=a2f61aba-511c-4afa-a7f3-3b7cb09536ef"
+    }
+]
