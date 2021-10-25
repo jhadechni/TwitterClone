@@ -11,13 +11,13 @@ This project is a clone for the Twitter app. Was developed with react and styled
 ## Clone the repo
 
 ```sh
-> git clone https://github.com/jhadechni/Twitter_Clone.git
+> git clone https://github.com/jhadechni/TwitterClone.git
 ```
 
 ## Enter to folder project
 
 ```sh
-> cd Twitter_Clone
+> cd TwitterClone
 ```
 
 ## Install all the dependences
