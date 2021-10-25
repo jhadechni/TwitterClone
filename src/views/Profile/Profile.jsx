@@ -1,8 +1,8 @@
 import cuid from 'cuid';
-import { NavBar, Trends, Card } from '../../components/common';
+import { NavBar, Trends, ProfileInfo } from '../../components/common';
 import { Container, Box, BoxContent, Root, Title, SubTitle, Icon, Container2, Container3 } from './profileStyles';
 import backArrow from '../../assets/svg/backarrow.svg'
-import data from '../../data.json';
+import profile from '../../userprofile.json';
 export const Profile = () => {
     return (
         <Root>
@@ -13,13 +13,18 @@ export const Profile = () => {
                 <BoxContent>
                     <Container2>
                         <Icon src={backArrow} alt="back-arrow" />
-                        <Container3>
-                            <Title>Profile</Title>
-                            <SubTitle>74 Tweets</SubTitle>
+                        {profile.map((e) => {
+                        return (
+                            <Container3>
+                            <Title>{e.name}</Title>
+                            <SubTitle>{e.tweets} Tweets</SubTitle>
                         </Container3>
+                        );
+                        })}
+                        
                     </Container2>
-                    {data.map((e) => {
-                        return <Card key={cuid()} values={e} />;
+                    {profile.map((e) => {
+                        return <ProfileInfo key={cuid()} values={e} />;
                     })}
                 </BoxContent>
 
