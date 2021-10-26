@@ -162,6 +162,7 @@ export const Img = styled.img`
   height: ${(props) => (props.round ? '40px' : '50%')};
 `;
 export const ContentContainer = styled.div``;
+
 export const IconImg = styled.img`
   cursor: pointer;
   border-radius: 24px;

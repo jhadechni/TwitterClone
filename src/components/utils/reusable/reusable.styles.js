@@ -16,7 +16,8 @@ export const BlackText = styled.p`
   margin-bottom: ${(props) => (props.margin_bottom ? '15px' : 'none')};
   margin: ${(props) => (props.margin ? '0px 5px 0px 5px' : 'none')};
   margin-top: ${(props) => (props.margin_top ? '15px' : 'none')};
-  font-weight: ${(props) => props.light && '400'};
+  font-weight: ${(props) => props.light ? '400' : '650'};
+  padding-left: ${(props) => (props.bio ? '15px': '0px')};
 `;
 export const LightText = styled.span`
   color: ${LIGHT_BLUE};
