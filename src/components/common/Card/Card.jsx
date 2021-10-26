@@ -6,10 +6,12 @@ import Retweet from '../../../assets/svg/retweeticon.svg';
 import Like from '../../../assets/svg/likeicon.svg';
 import Reply from '../../../assets/svg/replyicon.svg';
 import Share from '../../../assets/svg/shareicon.svg';
+import Threedots from '../../../assets/svg/threedots.svg';
 import {
   Container,
   ProfileCont,
   Img,
+  MoreCont,
   ContentContainer,
   HeadersContainer,
   TweetContent,
@@ -21,9 +23,11 @@ import {
   ImgContent
 } from './Card.styles';
 import { ModalReply } from '../ModalReply'
+import { ModalMore } from '../ModalMore'
 
 export const Card = ({ values }) => {
   const [showModalReply, setShowModalReply] = useState(false);
+  const [showModalMore, setShowModalMore] = useState(false);
   return (
     <Margins>
       <Container>
@@ -38,6 +42,10 @@ export const Card = ({ values }) => {
               {values.username}
             </GrayText>
             <GrayText margin>• {values.time_ago}</GrayText>
+            <MoreCont>
+              <IconImg onClick={() => setShowModalMore(true)} src={Threedots}/>
+              {showModalMore && <ModalMore closeModalMore={setShowModalMore}/>}
+            </MoreCont>
           </HeadersContainer>
 
           <Content>

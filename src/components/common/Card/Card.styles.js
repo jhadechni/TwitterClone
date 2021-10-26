@@ -16,15 +16,16 @@ export const Margins = styled.div`
   border-width: 0 1px 1px 1px;
   width: 694px;
   height: auto;
-  /* @media ${max_device.lg} {
-    width: auto;
-    padding: 0 20px 0 20px;
-  } */
   @media ${max_device.sm} {
     width: auto;
   }
 `;
-
+export const MoreCont =styled.div `
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: auto;
+`
 export const ProfileCont = styled.div``;
 export const Img = styled.img`
   width: ${(props) => (props.round ? '40px' : '100%')};
