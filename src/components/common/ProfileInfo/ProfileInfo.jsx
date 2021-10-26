@@ -8,14 +8,17 @@ import {
   HeadersContainer,
   Text,
   Margins,
+  BioSection,
+  LightBlueText,
+  GrayWords
 } from './ProfileInfo.styles';
 export const ProfileInfo = ({ values }) => {
   return (
     <Margins>
       <Container>
+        <Img src={values.banner_image} alt="banner"/>
         <ProfileCont>
-          <Img src={values.banner_image} alt="banner"/>
-          <Img round src={values.profile_picture} alt="Profile-picture" />
+          <Img round profile src={values.profile_picture} alt="Profile-picture" />
         </ProfileCont>
         <ContentContainer>
           <HeadersContainer>
@@ -23,9 +26,12 @@ export const ProfileInfo = ({ values }) => {
             <GrayText light dimmed margin>
               {values.username}
             </GrayText>
-            
           </HeadersContainer>
-          <BlackText margin> {values.bio}</BlackText>
+          <BioSection>
+            <BlackText margin>{values.bio}</BlackText>
+            <LightBlueText> Translate bio</LightBlueText>
+            <GrayWords> {values.location}</GrayWords>
+          </BioSection>
         </ContentContainer>
       </Container>
     </Margins>

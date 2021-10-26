@@ -12,6 +12,7 @@ export const ModalContainerBig = styled.section`
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
+  z-index: 2;
 `;
 
 export const ModalContainer = styled.section`
