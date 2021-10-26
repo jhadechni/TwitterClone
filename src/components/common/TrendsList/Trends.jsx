@@ -14,7 +14,7 @@ import searchIcon from '../../../assets/Images/search.png';
 import { TrendsItem } from '../TrendsItem';
 
 const data = [
-    { id: 1, hastag: 'JaimeSierra', quantity: '2000' },
+    { id: 1, hastag: 'JaimeSierra', quantity: '456' },
     { id: 2, hastag: 'Uninorte', quantity: '456' },
     { id: 3, hastag: 'Spiderman', quantity: '456' },
     { id: 4, hastag: 'VictorMendoza', quantity: '456' },
