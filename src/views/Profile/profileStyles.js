@@ -24,9 +24,8 @@ export const Container2 = styled.div`
 `;
 
 export const Container3 = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  justify-items: center;
 `;
 
 export const Box = styled.div`
@@ -54,10 +53,10 @@ export const SubTitle = styled.h3`
 `;
 
 export const Icon = styled.img`
-  width:  '20px';
-  height:  '20px';
+  width:  '10px';
+  height:  '10px';
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   &:hover {
         background-color: rgb(231, 231, 232);
     }

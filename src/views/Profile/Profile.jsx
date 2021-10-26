@@ -16,7 +16,7 @@ export const Profile = () => {
                         <Icon src={backArrow} alt="back-arrow" />
                         {profile.map((e) => {
                         return (
-                            <Container3>
+                        <Container3>
                             <Title>{e.name}</Title>
                             <SubTitle>{e.tweets} Tweets</SubTitle>
                         </Container3>

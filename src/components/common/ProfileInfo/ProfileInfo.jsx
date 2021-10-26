@@ -32,7 +32,6 @@ export const ProfileInfo = ({ values }) => {
             <Text>{values.name}</Text>
             {values.is_verified && <IconImg src={Verified} alt="verify-icon" />}
             </ContainerName>
-            
             <GrayText light dimmed margin>
               {values.username}
             </GrayText>
