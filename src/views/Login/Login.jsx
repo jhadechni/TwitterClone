@@ -1,6 +1,6 @@
 import { Form } from '../../components/common';
 import TwitterBlue from "../../assets/svg/twitterSmallLogo.svg"
-import { Container, Tools, Img } from './loginstyles';
+import { Container, Tools, Img } from './Login.styles';
 import {
   ButtonLightBlue,
   GrayText,

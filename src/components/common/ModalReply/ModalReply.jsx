@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import {
   ModalContainerBig,
   ModalContainer,
@@ -77,9 +76,7 @@ export const ModalReply = (props) => {
             </Content>
             <GrayWords align>
               Replying to{' '}
-              <Link to={"/"+values.username.substr(1,values.username.lenght)}>
-                <LightBlueText>{values.username}</LightBlueText>
-              </Link>
+              <LightBlueText to={"/"+values.username.substr(1,values.username.lenght)}>{values.username}</LightBlueText>
             </GrayWords>
           </ContentContainer>
         </Container>

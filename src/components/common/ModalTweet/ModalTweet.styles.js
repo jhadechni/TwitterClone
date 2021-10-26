@@ -63,12 +63,16 @@ export const CreateTweetBoxContainer = styled.div `
     padding-left: 10px;
 `
 
-export const CreateTweetInputBox = styled.input `
+export const CreateTweetInputBox = styled.textarea `
     font-size: 19px;
     padding-top: 15px;
+    resize: inherit;
+    font-family: 'Roboto' , sans-serif;
     border: none;
     outline: none;
     color: #000000;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 `
 
 export const CreateTweetButtonsContainer = styled.div `

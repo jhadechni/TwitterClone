@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { max_device, LIGHT_BLACK, DIMMED_GRAY, LIGHT_BLUE } from '../../utils';
+import { Link } from 'react-router-dom';
 
 export const ModalContainerBig = styled.section`
   position: fixed;
@@ -19,8 +20,7 @@ export const ModalContainer = styled.section`
   width: 568px;
   height: auto;
   min-height: 320px;
-  border-radius: 15px;
-  padding-bottom: 10px;
+  border-radius: 16px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -44,9 +44,9 @@ export const Icon = styled.img`
 export const CreateTweetSubcontainer = styled.div `
   display: flex;
   padding-top: 5px;
-  padding-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
+  padding-bottom: 5px;
 `
 
 export const CreateTweetProfilePicture = styled.img `
@@ -63,19 +63,22 @@ export const CreateTweetBoxContainer = styled.div `
   padding-left: 10px;
 `
 
-export const CreateTweetInputBox = styled.input `
+export const CreateTweetInputBox = styled.textarea `
     font-size: 19px;
     padding-top: 15px;
+    resize: inherit;
+    font-family: 'Roboto' , sans-serif;
     border: none;
     outline: none;
     color: #000000;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 `
 
 export const CreateTweetButtonsContainer = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-top: solid 1px #e7ecf065;
 `
 
 export const AddersButtonContainer = styled.div `
@@ -196,6 +199,7 @@ export const GrayWords = styled.p`
   font-weight: 400;
   font-size: 15px;
 `;
-export const LightBlueText = styled.span`
+export const LightBlueText = styled(Link)`
   color: ${LIGHT_BLUE};
+  text-decoration: none;
 `;

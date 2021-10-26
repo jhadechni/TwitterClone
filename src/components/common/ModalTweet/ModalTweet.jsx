@@ -52,7 +52,7 @@ export const ModalTweet = (props) => {
             <CreateTweetProfilePicture src={ProfilePic} alt='Profile'/>
           </div>
         <CreateTweetBoxContainer>
-            <CreateTweetInputBox type='text' onChange={handleChange} placeholder='What´s happening?'/>
+            <CreateTweetInputBox onChange={handleChange} placeholder='What´s happening?'/>
             <CreateTweetButtonsContainer>
                 <AddersButtonContainer>
                     <IconsButtons>
