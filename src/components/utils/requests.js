@@ -1,7 +1,7 @@
 import { Token as token} from './token';
 import Axios_withoutInstance from 'axios';
 
-const API = process.env.TWITTER_API_URL;
+const API = 'http://localhost:3001/api';
 
 export const getUsers = async () => {
     try {
@@ -20,9 +20,11 @@ export const login = async (username, password) => {
       username,
       password
     };
+    console.log(username);
     try {
       const req = await Axios_withoutInstance.post(`${API}/users/login`,data);
       return req;
+
     } catch (error) {
       return error;
     }
