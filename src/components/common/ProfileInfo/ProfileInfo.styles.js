@@ -91,11 +91,28 @@ export const LightBlueText = styled(Link)`
   font-size: 12px;
   text-decoration: none;
   padding-left: 5px;
+  padding-top: 5px;
 `;
 
 export const GrayWords = styled.text`
   color: ${DIMMED_GRAY};
   font-size: 15px;
-  padding-left: 6px;
-  padding-top: 20px;
+  padding-left: ${(props) => (props.bio ? '0px' : '6px')};
+  padding-top: ${(props) => (props.bio ? '13px' : '8px')};
+`;
+export const IconImg = styled.img`
+  cursor: pointer;
+  border-radius: 24px;
+  padding-top: ${(props) => (props.bio ? '9px': '0px')};
+  padding-left: ${(props) => (props.bio2 ? '15px': '0px')};
+`;
+export const ContainerName = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const ContainerSubSection = styled.div`
+  flex-direction: column;
+  align-items: center;
 `;
