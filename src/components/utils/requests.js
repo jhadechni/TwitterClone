@@ -64,7 +64,7 @@ export const likeTweet = async (like, tweetId) => {
   };
 
 //Tweets CRUD
-export const createTweets = async (content) => {
+export const createTweet = async (content) => {
     try {
       const req = await token.post(`${API}/tweets`, content);
       return req;

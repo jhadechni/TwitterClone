@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
-import React, {useState} from 'react';
-
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { createTweet } from '../../utils/requests';
 import {
   ModalContainerBig,
   ModalContainer,
@@ -41,6 +42,19 @@ export const ModalTweet = (props) => {
     }
     const handleTweet = (e) => {}
 
+    const history = useHistory();
+    const [tweetContent, setTweetContent] = useState('');
+    const handleTweetContent = (f) => setTweetContent(f.target.value);
+
+    const postTweet = async (tweetContent)=>{
+      const req = await createTweet(tweetContent);
+      if (req.status === 200){
+        console.log('tweetcreatedsucefully');
+        props.closeModalTweet(false)
+        history.push('/home');
+    }
+  }
+
   return ReactDOM.createPortal(
     <ModalContainerBig>
       <ModalContainer>
@@ -52,7 +66,7 @@ export const ModalTweet = (props) => {
             <CreateTweetProfilePicture src={ProfilePic} alt='Profile'/>
           </div>
         <CreateTweetBoxContainer>
-            <CreateTweetInputBox onChange={handleChange} placeholder='What´s happening?'/>
+            <CreateTweetInputBox onChange={handleChange, handleTweetContent}  placeholder='What´s happening?'/>
             <CreateTweetButtonsContainer>
                 <AddersButtonContainer>
                     <IconsButtons>
@@ -78,7 +92,7 @@ export const ModalTweet = (props) => {
                             </>
                         }
                     </CaptainDiv>
-                    <CreateTweetButton onClick={handleTweet}>Tweet</CreateTweetButton>
+                    <CreateTweetButton onClick={handleTweet, postTweet(tweetContent)}>Tweet</CreateTweetButton>
                 </TweetButtonContaner>
             </CreateTweetButtonsContainer>
         </CreateTweetBoxContainer>
