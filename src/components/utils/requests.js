@@ -29,9 +29,25 @@ export const login = async (username, password) => {
       return error;
     }
   };
-  
-  //Tweets
 
+ //Create user logic
+export const createUser = async (name, email, username, password, passwordConfirmation) =>{
+  const data = {
+    name,
+    email,
+    username,
+    password,
+    passwordConfirmation
+  };
+  try{
+    const req = await Axios_withoutInstance.post(`${API}/users` , data);
+    return req;
+  } catch (error) {
+    return error;
+  }
+} 
+  
+//Tweets
 export const getTweets = async () => {
     try {
       const req = await token.get(`${API}/tweets`);
